@@ -2,15 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner num = new Scanner(System.in);
-        int N = num.nextInt(); // Трёхзначное число
-        int x1, x2, x3, sum, next_num;
-        x1 = N%10;
-        x2 = (N%100)/10;
-        x3 = (N%1000)/100;
-        sum = x1+x2+x3;
-        next_num = (N / 2) * 2 + 2;
-        System.out.println(sum);
-        System.out.println(next_num);
+        Scanner N = new Scanner(System.in);
+        // 3602;
+        int add_time = N.nextInt();
+        int h = (add_time / 3600) % 24;
+        int min1 = add_time / 60 % 60 % 10;
+        int min2 = add_time / 60 % 60 / 10;
+        int s1 = add_time % 60 / 10;
+        int s2 = add_time % 10;
+        System.out.println(h + ":" + min1 + min2 + ":" + s1 + s2);
     }
 }
