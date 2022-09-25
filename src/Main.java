@@ -2,14 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner N = new Scanner(System.in);
-        // 3602;
-        int add_time = N.nextInt();
-        int h = (add_time / 3600) % 24;
-        int min1 = add_time / 60 % 60 % 10;
-        int min2 = add_time / 60 % 60 / 10;
-        int s1 = add_time % 60 / 10;
-        int s2 = add_time % 10;
-        System.out.println(h + ":" + min1 + min2 + ":" + s1 + s2);
+        Scanner cord = new Scanner(System.in);
+        double x = cord.nextDouble();
+        System.out.println(x>=-2.0 && x<=3.0 || x>=6.0 && x<=9.0 ? "false" : "true");
     }
 }
