@@ -1,16 +1,16 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Scanner as = new Scanner(System.in);
-        Scanner bs = new Scanner(System.in);
-        Scanner cs = new Scanner(System.in);
-        int rub =as.nextInt();
-        int cop = bs.nextInt();
-        int count = cs.nextInt();
-        double cost;
-        double price;
-        cost = (rub * 100 + cop);
-        price =((cost / 100.0) + (cost % 100.0) / 100.0) * count;
-        System.out.printf("%.1f", price);
+        Scanner num = new Scanner(System.in);
+        int N = num.nextInt(); // Трёхзначное число
+        int x1, x2, x3, sum, next_num;
+        x1 = N%10;
+        x2 = (N%100)/10;
+        x3 = (N%1000)/100;
+        sum = x1+x2+x3;
+        next_num = (N / 2) * 2 + 2;
+        System.out.println(sum);
+        System.out.println(next_num);
     }
 }
